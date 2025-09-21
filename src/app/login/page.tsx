@@ -34,8 +34,8 @@ export default function login() {
                     </form>
                 </CardContent>
                 <CardFooter className="flex-col gap-2">
-                    <Button type="button" onClick={fazer_login} className="cursor-pointer w-full">Enviar</Button>
-                    <Button variant="outline" className="cursor-pointer w-full">Login with Google</Button>
+                    <Button type="button" onClick={fazer_login} className="cursor-pointer w-full">Login</Button>
+                    <Button variant="outline" className="cursor-pointer w-full"><img src={"/icons/Google-icon.png"} className="w-5"/>Login with Google</Button>
                 </CardFooter>
             </Card>
         </div>

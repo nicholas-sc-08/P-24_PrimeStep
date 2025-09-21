@@ -1,11 +1,11 @@
 "use client";
 
-
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
+import InputMask from "react-input-mask";
 
 export default function cadastro() {
 
@@ -30,9 +30,9 @@ export default function cadastro() {
                             <Label htmlFor="email">Email</Label>
                             <Input id="email" placeholder="email@exemplo.com" required/>
                             <Label htmlFor="telefone">Telefone</Label>
-                            <Input id="telefone" placeholder="+55 (99) 91111-1111" type="tel"/>
+                            <Input id="telefone" placeholder="+55 (99) 91111-1111" type="tel" required/>
                             <Label htmlFor="senha">Senha</Label>
-                            <Input id="senha" placeholder="Sua senha de usuário" type="password"/>
+                            <Input id="senha" placeholder="Sua senha de usuário" type="password" required/>
                         </div>
                     </form>
                 </CardContent>
