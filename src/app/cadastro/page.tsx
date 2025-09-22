@@ -5,7 +5,6 @@ import { Label } from "@/components/ui/label";
 import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
-import InputMask from "react-input-mask";
 
 export default function cadastro() {
 
@@ -13,8 +12,8 @@ export default function cadastro() {
 
     return(
 
-        <div className="flex items-center justify-center min-h-screen">
-            <Card className="w-full max-w-sm">
+        <div className="flex items-center justify-center min-h-screen bg-neutral-100">
+            <Card className="w-full max-w-sm bg-neutral-50">
                 <CardHeader>
                     <CardTitle>Crie sua conta</CardTitle>
                     <CardDescription>Crie uma conta em nossa plataforma para acessar nossos produtos exclusivos!</CardDescription>
@@ -37,7 +36,7 @@ export default function cadastro() {
                     </form>
                 </CardContent>
                 <CardFooter className="flex flex-col gap-2">
-                    <Button className="cursor-pointer w-full">Enviar</Button>
+                    <Button className="cursor-pointer w-full bg-neutral-600 hover:bg-neutral-700">Cadastrar</Button>
                 </CardFooter>
             </Card>
         </div>
