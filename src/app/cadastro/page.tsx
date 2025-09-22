@@ -10,7 +10,7 @@ export default function cadastro() {
 
     const router = useRouter();
 
-    return(
+    return (
 
         <div className="flex items-center justify-center min-h-screen bg-neutral-100">
             <Card className="w-full max-w-sm bg-neutral-50">
@@ -25,13 +25,13 @@ export default function cadastro() {
                     <form className="flex flex-col gap-6">
                         <div className="grid gap-2">
                             <Label htmlFor="nome">Nome</Label>
-                            <Input id="nome" placeholder="Seu nome de usuário" required/>
+                            <Input id="nome" placeholder="Seu nome de usuário" required />
                             <Label htmlFor="email">Email</Label>
-                            <Input id="email" placeholder="email@exemplo.com" required/>
+                            <Input id="email" placeholder="email@exemplo.com" required />
                             <Label htmlFor="telefone">Telefone</Label>
-                            <Input id="telefone" placeholder="+55 (99) 91111-1111" type="tel" required/>
+                            <Input id="telefone" placeholder="+55 (99) 91111-1111" type="tel" required />
                             <Label htmlFor="senha">Senha</Label>
-                            <Input id="senha" placeholder="Sua senha de usuário" type="password" required/>
+                            <Input id="senha" placeholder="Sua senha de usuário" type="password" required />
                         </div>
                     </form>
                 </CardContent>
@@ -40,4 +40,5 @@ export default function cadastro() {
                 </CardFooter>
             </Card>
         </div>
-    )};
+    )
+};

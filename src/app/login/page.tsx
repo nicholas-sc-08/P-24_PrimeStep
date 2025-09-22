@@ -12,8 +12,8 @@ export default function login() {
     const router = useRouter();
 
     return (
-        <div className="flex items-center justify-center min-h-screen">
-            <Card className="w-full max-w-sm">
+        <div className="flex items-center justify-center min-h-screen bg-neutral-100">
+            <Card className="w-full max-w-sm bg-neutral-50">
                 <CardHeader>
                     <CardTitle>Faça Login na sua conta</CardTitle>
                     <CardDescription>Insira seu email abaixo para fazer login na sua conta</CardDescription>
@@ -34,7 +34,7 @@ export default function login() {
                     </form>
                 </CardContent>
                 <CardFooter className="flex-col gap-2">
-                    <Button type="button" onClick={fazer_login} className="cursor-pointer w-full">Login</Button>
+                    <Button type="button" onClick={fazer_login} className="cursor-pointer w-full bg-neutral-600 hover:bg-neutral-700">Login</Button>
                     <Button variant="outline" className="cursor-pointer w-full"><img src={"/icons/Google-icon.png"} className="w-5"/>Login with Google</Button>
                 </CardFooter>
             </Card>
