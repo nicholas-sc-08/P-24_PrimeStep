@@ -3,21 +3,22 @@
 import { Card, CardContent, CardHeader, CardFooter, CardTitle, CardDescription, CardAction } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-
+import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
-import Link from "next/link";
 import { fazer_login } from "@/services/login";
 
 export default function login() {
 
+    const router = useRouter();
+
     return (
-        <div className="flex items-center justify-center min-h-screen">
-            <Card className="w-full max-w-sm">
+        <div className="flex items-center justify-center min-h-screen bg-neutral-100">
+            <Card className="w-full max-w-sm bg-neutral-50">
                 <CardHeader>
                     <CardTitle>Faça Login na sua conta</CardTitle>
                     <CardDescription>Insira seu email abaixo para fazer login na sua conta</CardDescription>
                     <CardAction>
-                        <Button className="cursor-pointer" variant={"link"}>Cadastre-se</Button>
+                        <Button onClick={() => router.push(`/cadastro`)} className="cursor-pointer" variant={"link"}>Cadastre-se</Button>
                     </CardAction>
                 </CardHeader>
                 <CardContent>
@@ -33,8 +34,8 @@ export default function login() {
                     </form>
                 </CardContent>
                 <CardFooter className="flex-col gap-2">
-                    <Button type="button" onClick={fazer_login} className="cursor-pointer w-full">Enviar</Button>
-                    <Button variant="outline" className="cursor-pointer w-full">Login with Google</Button>
+                    <Button type="button" onClick={fazer_login} className="cursor-pointer w-full bg-neutral-600 hover:bg-neutral-700">Login</Button>
+                    <Button variant="outline" className="cursor-pointer w-full"><img src={"/icons/Google-icon.png"} className="w-5"/>Login with Google</Button>
                 </CardFooter>
             </Card>
         </div>
