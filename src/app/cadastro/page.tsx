@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
+import { cadastro_cliente } from "@/services/cadastro";
 
 export default function cadastro() {
 
@@ -36,7 +37,7 @@ export default function cadastro() {
                     </form>
                 </CardContent>
                 <CardFooter className="flex flex-col gap-2">
-                    <Button className="cursor-pointer w-full bg-neutral-600 hover:bg-neutral-700">Cadastrar</Button>
+                    <Button type="button" onClick={() => cadastro_cliente} className="cursor-pointer w-full bg-neutral-600 hover:bg-neutral-700">Cadastrar</Button>
                 </CardFooter>
             </Card>
         </div>
