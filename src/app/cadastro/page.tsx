@@ -6,10 +6,14 @@ import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader,
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
 import { cadastro_cliente } from "@/services/cadastro";
+import { useGlobalContext } from "@/context/GlobalContext";
 
 export default function cadastro() {
 
     const router = useRouter();
+    const { confirmar_senha, set_confirmar_senha } = useGlobalContext();
+    const { form_cadastro, set_form_cadastro } = useGlobalContext();
+    const { array_usuarios } = useGlobalContext();
 
     return (
 
@@ -26,18 +30,20 @@ export default function cadastro() {
                     <form className="flex flex-col gap-6">
                         <div className="grid gap-2">
                             <Label htmlFor="nome">Nome</Label>
-                            <Input id="nome" placeholder="Seu nome de usuário" required />
+                            <Input value={form_cadastro.nome} onChange={e => set_form_cadastro({ ...form_cadastro, nome: e.target.value })} id="nome" placeholder="Seu nome de usuário" required />
                             <Label htmlFor="email">Email</Label>
-                            <Input id="email" placeholder="email@exemplo.com" required />
+                            <Input value={form_cadastro.email} onChange={e => set_form_cadastro({ ...form_cadastro, email: e.target.value })} id="email" placeholder="email@exemplo.com" required />
                             <Label htmlFor="telefone">Telefone</Label>
-                            <Input id="telefone" placeholder="+55 (99) 91111-1111" type="tel" required />
+                            <Input value={form_cadastro.telefone} onChange={e => set_form_cadastro({ ...form_cadastro, telefone: e.target.value })} id="telefone" placeholder="+55 (99) 91111-1111" type="tel" required />
                             <Label htmlFor="senha">Senha</Label>
-                            <Input id="senha" placeholder="Sua senha de usuário" type="password" required />
+                            <Input value={form_cadastro.senha} onChange={e => set_form_cadastro({ ...form_cadastro, senha: e.target.value })} id="senha" placeholder="Sua senha de usuário" type="password" required />
+                            <Label htmlFor="confirmar_senha">Confirmar Senha</Label>
+                            <Input value={confirmar_senha} onChange={e => set_confirmar_senha(e.target.value)} id="confirmar_senha" placeholder="Confirme sua senha de usuário" type="password" required />
                         </div>
                     </form>
                 </CardContent>
                 <CardFooter className="flex flex-col gap-2">
-                    <Button type="button" onClick={() => cadastro_cliente} className="cursor-pointer w-full bg-neutral-600 hover:bg-neutral-700">Cadastrar</Button>
+                    <Button type="button" onClick={() => cadastro_cliente(form_cadastro, confirmar_senha, array_usuarios)} className="cursor-pointer w-full bg-neutral-600 hover:bg-neutral-700">Cadastrar</Button>
                 </CardFooter>
             </Card>
         </div>

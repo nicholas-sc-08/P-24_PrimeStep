@@ -1,8 +1,12 @@
 import React from "react";
-import { Icadastro_form_cadastro } from "./Iform_cadastro.types";
+import { Icadastro_usuario, Iusuario } from "./Iusuario.types";
 
 export interface IGlobalContextType {
 
-    form_cadastro: Icadastro_form_cadastro | null,
+    array_usuarios: Iusuario[];
+    set_array_usuarios: React.Dispatch<React.SetStateAction<any>>;
+    form_cadastro: Icadastro_usuario;
     set_form_cadastro: React.Dispatch<React.SetStateAction<any>>;
+    confirmar_senha: string;
+    set_confirmar_senha: React.Dispatch<React.SetStateAction<any>>;
 };
