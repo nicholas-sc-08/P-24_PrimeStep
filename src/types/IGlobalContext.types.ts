@@ -9,4 +9,6 @@ export interface IGlobalContextType {
     set_form_cadastro: React.Dispatch<React.SetStateAction<any>>;
     confirmar_senha: string;
     set_confirmar_senha: React.Dispatch<React.SetStateAction<any>>;
+    mensagem_alert: string;
+    set_mensagem_alert: React.Dispatch<React.SetStateAction<any>>;
 };
