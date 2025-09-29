@@ -1,4 +1,4 @@
-export interface Iform_cadastro {
+export interface Iusuario {
 
     id: number;
     nome: string;
@@ -7,7 +7,7 @@ export interface Iform_cadastro {
     senha: string;
 };
 
-export interface Icadastro_form_cadastro {
+export interface Icadastro_usuario {
 
     nome: string;
     email: string;
@@ -15,7 +15,7 @@ export interface Icadastro_form_cadastro {
     senha: string;
 };
 
-export interface Iupdate_form_cadastro {
+export interface Iupdate_usuario {
 
     nome?: string;
     email?: string;
