@@ -11,6 +11,7 @@ export const GlobalProvider = ({ children } : { children: ReactNode}) => {
     const [array_usuarios, set_array_usuarios] = useState<Iusuario[]>([]);
     const [form_cadastro, set_form_cadastro] = useState<Icadastro_usuario>({nome: "", email: "",telefone: "", senha: ""});
     const [confirmar_senha, set_confirmar_senha] = useState<string>("");
+    const [mensagem_alert, set_mensagem_alert] = useState<string>("");
 
     return(
 
@@ -22,6 +23,8 @@ export const GlobalProvider = ({ children } : { children: ReactNode}) => {
             set_form_cadastro, 
             confirmar_senha, 
             set_confirmar_senha,
+            mensagem_alert,
+            set_mensagem_alert
 
         }}>{children}</GlobalContext.Provider>
 )};

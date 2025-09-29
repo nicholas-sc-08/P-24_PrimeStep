@@ -46,5 +46,6 @@ export async function cadastro_cliente(data: Icadastro_usuario, senha_confirmada
 
     } catch (erro: any) {
 
+        
     };
 };
